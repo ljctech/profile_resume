@@ -5,4 +5,4 @@ https://startbootstrap.com/themes/resume/
 
 add .
 commit -m 'first'
-deploy resume-env --profile eb-cli2
+eb deploy resume-env --profile eb-cli2
