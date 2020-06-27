@@ -1,12 +1,13 @@
 #!/bin/bash
 current_time=$(date "+%Y.%m.%d-%H.%M.%S") 
-message = "$current_time  ${1}"
+$1  += $current_time
 
 git add . ;
-git commit -m  "{$message}";
+git commit -m  "$1";
 git push origin master;
 echo "*****"
-echo "${message}"
+echo "$1"
+# echo "${message}"
 echo "*****"
 
 eb deploy resume-env --profile eb-cli2 ;
