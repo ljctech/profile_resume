@@ -1,11 +1,12 @@
 #!/bin/bash
-current_time=$(date "+%Y.%m.%d-%H.%M.%S")
+current_time=$(date "+%Y.%m.%d-%H.%M.%S") 
+message = "$current_time  ${1}"
 
 git add . ;
-git commit -m "$current_time" ;
+git commit -m  "{$message}";
 git push origin master;
 echo "*****"
-echo "Depoloying to AWS EB"
+echo "${message}"
 echo "*****"
 
 eb deploy resume-env --profile eb-cli2 ;
