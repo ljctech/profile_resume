@@ -3,7 +3,7 @@ current_time=$(date "+%Y.%m.%d-%H.%M.%S")
 $1  += $current_time
 
 git add . ;
-git commit -m  "$1";
+git commit -m  '"$1"';
 git push origin master;
 echo "*****"
 echo "$1"
