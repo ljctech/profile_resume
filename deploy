@@ -1,5 +1,6 @@
 #!/bin/bash
 
 git add . ;
-git commit -m 'first' ;
+git commit -m 'loaded ' ;
+git push origin master;
 eb deploy resume-env --profile eb-cli2 ;
